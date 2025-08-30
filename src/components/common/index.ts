@@ -1,6 +1,7 @@
 export { AboutBlock } from './AboutBlock';
 export { BrlLogo } from './BrlLogo';
 export { Button } from './Button';
+export { FAQ } from './FAQ';
 export { FeatureBlock } from './FeatureBlock';
 export { HighlightBlock } from './HighlightBlock';
 export { Modal } from './Modal';

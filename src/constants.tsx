@@ -18,6 +18,7 @@ export const NAVIGATION_DATA: ConstantData[] = [
   { title: <Translation>{(t) => t('NAVIGATION.DOCS')}</Translation>, value: 'https://brlcad.org/wiki/' },
   { title: <Translation>{(t) => t('NAVIGATION.SUPPORT')}</Translation>, value: 'https://github.com/BRL-CAD/brlcad/issues' },
   { title: <Translation>{(t) => t('NAVIGATION.GALLERY')}</Translation>, value: 'https://brlcad.org/gallery/' },
+  { title: <Translation>{(t) => t('NAVIGATION.OGV')}</Translation>, value: '/ogv' },
 ];
 
 export const SOCIAL_DATA = (t: TFunction): (ConstantData & { label: string })[] => [
@@ -48,6 +49,7 @@ export const LINKS = {
   IRC_LINK: 'https://brlcad.zulipchat.com/',
   LEARN_MORE_PDF: 'https://brlcad.org/HACKING_BRL-CAD.pdf',
   WIKIPEDIA: 'https://en.wikipedia.org/wiki/BRL-CAD',
+  OGV_LINK: 'https://ogv-five.vercel.app/',
 };
 
 export const ABOUT_US = (t: TFunction) => [

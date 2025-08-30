@@ -1,0 +1,58 @@
+.faq {
+  &-container {
+    @include flex(
+      $direction: column,
+      $justifyContent: center,
+      $alignItems: center,
+      $wrap: nowrap
+    );
+    width: 100%;
+  }
+  &-items {
+    width: 100%;
+  }
+  &-item {
+    @include flex(
+      $direction: row,
+      $justifyContent: space-between,
+      $alignItems: center,
+      $wrap: nowrap
+    );
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid var(--border-primary);
+    cursor: pointer;
+    background-color: transparent;
+  }
+  &-answer {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+    width: 100%;
+  }
+  &-question {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  &-icon {
+    &-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      border: 1px solid var(--border-primary);
+      border-radius: 50px;
+      @include flex($justifyContent: center, $alignItems: center);
+    }
+    &-cross {
+      width: auto;
+      height: auto;
+      padding: 10px;
+    }
+    &-plus {
+      padding: 5px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
