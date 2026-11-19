@@ -140,5 +140,120 @@
       "QUESTION": " Can I share my 3D models?",
       "ANSWER": "Absolutely. Each model comes with a shareable link. You can choose whether it’s public or private, and others can view it in 3D instantly."
     }
+  },
+  "ABOUT_PAGE": {
+    "TITLE": "About",
+    "EYEBROW": "About BRL-CAD",
+    "HEADING": "Model solids. Understand geometry.",
+    "LEAD": "BRL-CAD is an open-source solid modeling system for creating 3D geometry, analyzing models, and building geometry tools.",
+    "GET_BRLCAD": "Get BRL-CAD",
+    "OVERVIEW": "Read the technical overview",
+    "CAPABILITIES": {
+      "TITLE": "Three ways to work with geometry.",
+      "MODELING": {
+        "TITLE": "Solid modeling",
+        "DESCRIPTION": "Build models from geometric primitives and combine them with union, subtraction, and intersection. Use the interactive MGED editor to construct and edit geometry.",
+        "LINK": "Learn how shapes combine"
+      },
+      "ANALYSIS": {
+        "TITLE": "Geometric analysis",
+        "DESCRIPTION": "Inspect ray paths, check for overlaps, and calculate geometric properties with tools such as NIRT and GQA. Choose the analysis and settings that suit your model.",
+        "LINK": "Explore geometry analysis"
+      },
+      "PROGRAMMING": {
+        "TITLE": "Programmable geometry",
+        "DESCRIPTION": "Automate geometry tasks with scripts, or use BRL-CAD’s C/C++ libraries in your own applications. Developer guides explain the interfaces and how they fit together.",
+        "LINK": "Explore the programming interfaces"
+      }
+    },
+    "EXAMPLES": {
+      "TITLE": "See it in practice.",
+      "DESCRIPTION": "Explore procedural models and rendering examples in the gallery, then follow the linked guides to see how they were made. For a deeper introduction to the system and its history, read the technical overview.",
+      "GALLERY": "Explore the gallery",
+      "LESSON": "Try the first lesson"
+    },
+    "COMMUNITY": {
+      "TITLE": "Open source. Open to participation.",
+      "DESCRIPTION": "<source>Read and build the source</source>, <support>ask the community a question</support>, or work through the <guide>contributor guide</guide> to find a place to help."
+    }
+  },
+  "NEWS_PAGE": {
+    "TITLE": "News",
+    "EYEBROW": "Project updates",
+    "LEAD": "Release highlights and updates from BRL-CAD. Read here without a social-media account.",
+    "RELEASE_NEWS": "Release news",
+    "DOWNLOAD_PACKAGES": "Download packages",
+    "FOLLOW_DEVELOPMENT": "Follow development",
+    "UPDATE": {
+      "DATE": "2026-10-19",
+      "CATEGORY": "Website",
+      "TITLE": "Documentation, support, and models in one place.",
+      "DESCRIPTION": "The website now brings documentation, community support, and the model gallery together under the same navigation. Search commands and lessons in the <docs>documentation</docs>, explore BRL-CAD renders in the <gallery>Gallery</gallery>, or find public discussions and joining details on <support>Support</support>."
+    },
+    "RELEASES": {
+      "TITLE": "Release news",
+      "DESCRIPTION": "Highlights from the project's published release notes, newest first.",
+      "READ_NOTES": "Read the {{version}} release notes",
+      "NOTE": "Release notes and platform packages are published separately. See <download>Downloads</download> for available installers, or browse <tags>release tags and source snapshots</tags>."
+    },
+    "FOLLOW": {
+      "TITLE": "Follow the project",
+      "DEVELOPMENT": {
+        "TITLE": "Current development",
+        "DESCRIPTION": "See changes as they land in the main development branch. For build instructions and ways to contribute, start with the <source>source guide</source>.",
+        "LINK": "Browse development activity"
+      },
+      "ANNOUNCEMENTS": {
+        "TITLE": "Community announcements",
+        "DESCRIPTION": "Read the public announcement channel on Zulip without an account. For questions or help joining, visit <support>Support</support>.",
+        "LINK": "Read community announcements"
+      }
+    }
+  },
+  "SUPPORT_PAGE": {
+    "TITLE": "Support",
+    "EYEBROW": "Community support",
+    "HEADING": "Get help.",
+    "LEAD": "Ask the community about modeling, installation, builds, or your next idea.",
+    "CHAT": {
+      "TITLE": "Ask the community on Zulip.",
+      "DESCRIPTION": "<strong>No account needed to read the public channels.</strong> Log in to ask questions or reply. New accounts currently require an invitation.",
+      "READ": "Read public discussions",
+      "LOGIN": "Log in to participate",
+      "INVITE": "Need an invitation? Email <mail>devs@brlcad.org</mail>.",
+      "CHANNELS": "Public channels: <brlcad>brlcad (general help)</brlcad> · <announce>announce (project news)</announce> · <gsoc>Google Summer of Code (student projects)</gsoc>."
+    },
+    "RESOURCES": {
+      "TITLE": "Just looking for an answer?",
+      "DESCRIPTION": "These resources are open to read without an account.",
+      "DOCS": {
+        "TITLE": "Documentation",
+        "DESCRIPTION": "Search the command reference, work through a lesson, or read the modeling and developer guides in your browser.",
+        "LINK": "Browse the documentation"
+      },
+      "ARCHIVE": {
+        "TITLE": "Historical mailing-list archive",
+        "DESCRIPTION": "Browse older user questions and answers for reference. Ask new questions on Zulip.",
+        "LINK": "Read the mailing-list archive"
+      }
+    },
+    "QUESTION": {
+      "TITLE": "Help us help you.",
+      "CONTEXT": {
+        "STEP": "01 / Context",
+        "TITLE": "What are you trying to do?",
+        "DESCRIPTION": "Describe the result you want and what happened instead. Mention your BRL-CAD version and operating system."
+      },
+      "REPRODUCE": {
+        "STEP": "02 / Reproduce",
+        "TITLE": "Show the smallest example.",
+        "DESCRIPTION": "Include the command, error text, or a small model that demonstrates the problem. Remove private or sensitive data before sharing."
+      },
+      "DISCUSS": {
+        "STEP": "03 / Discuss",
+        "TITLE": "Give the topic a clear name.",
+        "DESCRIPTION": "Keep related messages together. The community spans time zones, so leave enough detail for someone to answer later."
+      }
+    }
   }
 }

@@ -1,0 +1,16 @@
+[{
+    "version": "7.46.0",
+    "date": "2026-10-12",
+    "summary": "Expanded STEP, IGES, and JT conversion, OpenSCAD CSG import/export, more reliable facetization, and modeling and ray-tracing fixes."
+  },
+  {
+    "version": "7.44.0",
+    "date": "2026-07-23",
+    "summary": "More procedural geometry generators, broader import support, rendering improvements, and the move to AsciiDoc with over 220 added manual pages."
+  },
+  {
+    "version": "7.42.2",
+    "date": "2026-03-13",
+    "summary": "A maintenance release addressing triangle-mesh ray-tracing corner cases, command behavior, dependencies, and documentation."
+  }
+]

@@ -1,0 +1,121 @@
+.info-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: $rhythm * 6 $rhythm * 5 $rhythm * 8;
+
+  @include tablet-large {
+    padding: $rhythm * 5 $rhythm * 3;
+  }
+
+  @include tablet {
+    padding: $rhythm * 3 $rhythm * 2;
+  }
+
+  h2 {
+    @include font($fontSize: 32px, $fontWeight: 500);
+    margin-bottom: $rhythm;
+
+    @include tablet {
+      @include font($fontSize: 26px);
+    }
+  }
+
+  h3 {
+    @include font($fontSize: 20px, $fontWeight: 500);
+    margin-bottom: $rhythm;
+  }
+
+  p {
+    @include font($fontSize: 16px, $lineHeight: 1.6);
+    margin-bottom: $rhythm;
+  }
+}
+
+.info-intro {
+  margin-bottom: $rhythm * 4;
+
+  h2 {
+    @include font($fontSize: 44px);
+
+    @include tablet {
+      @include font($fontSize: 32px);
+    }
+  }
+}
+
+.info-eyebrow {
+  @include font($fontWeight: 700, $color: var(--primary-color), $textTransform: uppercase);
+  letter-spacing: 0.08em;
+}
+
+.info-page .info-lead {
+  @include font($fontSize: 20px, $color: var(--medium-grey));
+  max-width: 760px;
+}
+
+.info-actions {
+  @include flex($wrap: wrap);
+  gap: $rhythm * 1.5;
+  margin-top: $rhythm * 2;
+}
+
+.info-section {
+  margin-bottom: $rhythm * 5;
+  scroll-margin-top: $rhythm * 2;
+}
+
+.info-panel {
+  background: var(--surface-bg);
+  box-shadow: 15px 15px 45px var(--black-10);
+  padding: $rhythm * 3;
+
+  @include tablet {
+    padding: $rhythm * 2;
+  }
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $rhythm * 2;
+  margin-top: $rhythm * 2;
+
+  &--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet-medium {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-card {
+  @include flex($direction: column);
+  background: var(--surface-bg);
+  border-top: 3px solid var(--primary-color);
+  padding: $rhythm * 2;
+
+  > p:last-child {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  &-step {
+    @include font($fontSize: 13px, $fontWeight: 700, $color: var(--secondary-color), $textTransform: uppercase);
+    letter-spacing: 0.08em;
+    margin-bottom: $rhythm;
+  }
+}
+
+.info-page .info-note {
+  @include font($fontSize: 14px, $color: var(--medium-grey));
+}
+
+.info-link {
+  @include font($fontWeight: 500, $color: var(--primary-color));
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}

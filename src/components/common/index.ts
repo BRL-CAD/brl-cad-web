@@ -4,6 +4,8 @@ export { Button } from './Button';
 export { FAQ } from './FAQ';
 export { FeatureBlock } from './FeatureBlock';
 export { HighlightBlock } from './HighlightBlock';
+export { InfoCard } from './InfoCard';
+export { InfoIntro } from './InfoIntro';
 export { Modal } from './Modal';
 export { PageHeader } from './PageHeader';
 export { RepositoryCard } from './RepositoryCard';
