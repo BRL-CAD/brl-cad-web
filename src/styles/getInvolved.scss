@@ -1,6 +1,6 @@
 .get-involved {
   @include flex($direction: column, $justifyContent: center, $alignItems: center);
-  background-color: var(--dark-grey);
+  background-color: var(--band-bg);
   padding: $rhythm * 4;
 
   @include tablet {

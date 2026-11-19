@@ -1,6 +1,6 @@
 .repository-card {
   @include flex();
-  background: var(--white);
+  background: var(--surface-bg);
   padding: $rhythm * 2;
 
   &-body {
@@ -28,7 +28,7 @@
   }
 
   svg {
-    fill: var(--black-100);
+    fill: var(--text-color);
     min-height: $rhythm * 8;
     min-width: $rhythm * 8;
   }

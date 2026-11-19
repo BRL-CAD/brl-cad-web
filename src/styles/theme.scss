@@ -31,4 +31,27 @@ $black: #000000;
   --light-grey: #999999;
   --medium-grey: #666666;
   --dark-grey: #333333;
+
+  --surface-bg: var(--white);
+  --band-bg: #333333;
+  --text-color: #{$black};
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-grad-1: #121212;
+  --bg-grad-2: #161214;
+
+  --dialog-bg: #242424;
+
+  --border-primary: #333333;
+
+  --light-grey: #777777;
+  --medium-grey: #AAAAAA;
+  --dark-grey: #E6E6E6;
+
+  --surface-bg: #1E1E1E;
+  --band-bg: #242424;
+  --text-color: #F2F2F2;
 }

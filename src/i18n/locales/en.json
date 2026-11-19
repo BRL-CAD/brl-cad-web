@@ -7,7 +7,8 @@
     "DOCS": "Docs",
     "SUPPORT": "Support",
     "GALLERY": "Gallery",
-    "OGV": "OGV"
+    "OGV": "OGV",
+    "TOGGLE_THEME": "Toggle dark theme"
   },
   "MAIN": {
     "TITLE": "<1>BRL</1><1>-</1><1>CAD</1>",

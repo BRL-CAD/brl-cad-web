@@ -22,6 +22,7 @@ nav {
   .nav-links {
     @include flex();
     margin: 0;
+    margin-left: auto;
     padding: 0;
 
     @include tablet {
@@ -62,6 +63,36 @@ nav {
     }
   }
 
+  .nav-actions {
+    @include flex($alignItems: center);
+    margin-left: $rhythm * 2.5;
+  }
+
+  .nav-theme {
+    @include flex($alignItems: center, $justifyContent: center);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: $rhythm * 3;
+    width: $rhythm * 3;
+    color: var(--medium-grey);
+
+    &-sun {
+      display: none;
+    }
+
+    [data-theme="dark"] & {
+      &-moon {
+        display: none;
+      }
+
+      &-sun {
+        display: block;
+      }
+    }
+  }
+
   .nav-toggle {
     display: none;
     cursor: pointer;
@@ -69,6 +100,8 @@ nav {
     border: none;
     outline: none;
     padding: 0;
+    margin-left: $rhythm;
+    color: var(--medium-grey);
 
     @include tablet {
       display: block;

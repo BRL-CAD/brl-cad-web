@@ -22,6 +22,8 @@ export const NAVIGATION_DATA: ConstantData[] = [
   // { title: <Translation>{(t) => t('NAVIGATION.OGV')}</Translation>, value: '/ogv' },
 ];
 
+export const THEME_STORAGE_KEY = 'theme';
+
 export const SOCIAL_DATA = (t: TFunction): (ConstantData & { label: string })[] => [
   {
     title: 'facebook',
