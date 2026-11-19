@@ -21,7 +21,7 @@ export const HowToUseOGV: React.FC<IProps> = () => {
       style={{ scale }}
     >
       <video
-        src="/how-to-use.mp4"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/how-to-use.mp4`}
         className="how-to-use-video"
         loop
         muted
