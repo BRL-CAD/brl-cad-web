@@ -17,7 +17,7 @@ export const NAVIGATION_DATA: ConstantData[] = [
   { title: <Translation>{(t) => t('NAVIGATION.ABOUT')}</Translation>, value: '/about/' },
   { title: <Translation>{(t) => t('NAVIGATION.DOCS')}</Translation>, value: 'https://brlcad.org/docs/' },
   { title: <Translation>{(t) => t('NAVIGATION.SUPPORT')}</Translation>, value: '/support/' },
-  { title: <Translation>{(t) => t('NAVIGATION.GALLERY')}</Translation>, value: 'https://brlcad.org/gallery/' },
+  { title: <Translation>{(t) => t('NAVIGATION.GALLERY')}</Translation>, value: '/gallery/' },
   // TODO: OGV is not deployed yet, restore this link once it is
   // { title: <Translation>{(t) => t('NAVIGATION.OGV')}</Translation>, value: '/ogv' },
 ];
@@ -56,7 +56,6 @@ export const LINKS = {
   // Served by brlcad.org itself, outside this site
   DOCS: 'https://brlcad.org/docs/',
   DOCS_HTML: 'https://brlcad.org/docs/html/',
-  GALLERY: 'https://brlcad.org/gallery/',
   SOURCE: 'https://brlcad.org/source/',
   DOWNLOAD: 'https://brlcad.org/download/',
   RELEASE_TAGS: 'https://git.brlcad.org/BRL-CAD/brlcad/tags',
@@ -67,7 +66,11 @@ export const LINKS = {
   ZULIP_GSOC: 'https://brlcad.zulipchat.com/#narrow/channel/111975-Google-Summer-of-Code',
   ZULIP_INVITE: 'mailto:devs@brlcad.org?subject=BRL-CAD%20Zulip%20invitation',
   MAILING_LIST: 'https://sourceforge.net/p/brlcad/mailman/brlcad-users/',
+  FACEBOOK: 'https://www.facebook.com/BRL-CAD-387112738872/',
 };
+
+// Files in public/ are not prefixed by next/link, so add the base path by hand
+export const withBasePath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH}${path}`;
 
 export const releaseNotesLink = (version: string) => `https://git.brlcad.org/BRL-CAD/brlcad/raw/tag/rel-${version.replace(/\./g, '-')}/NEWS`;
 

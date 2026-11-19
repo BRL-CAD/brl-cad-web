@@ -255,5 +255,90 @@
         "DESCRIPTION": "Keep related messages together. The community spans time zones, so leave enough detail for someone to answer later."
       }
     }
+  },
+  "GALLERY_PAGE": {
+    "TITLE": "Gallery",
+    "EYEBROW": "BRL-CAD / Gallery",
+    "HEADING": "Beyond<br/>the surface.",
+    "DECK": "Solid geometry. Remarkable imagery.",
+    "INTRO": "From the elegance of an algorithm to the detail of an engineered assembly, explore what happens when precise models meet light.",
+    "EXPLORE": "Explore the collection",
+    "INTRO_NOTE": "Real BRL-CAD work, selected from project documentation and the historical gallery. Open any image to explore its story and source.",
+    "COLLECTION": {
+      "EYEBROW": "The collection",
+      "TITLE": "A closer look.",
+      "DESCRIPTION": "Engineering, generated forms and the art of seeing inside.",
+      "FILTER_LABEL": "Filter gallery",
+      "COUNT_one": "{{count}} piece",
+      "COUNT_other": "{{count}} pieces"
+    },
+    "CATEGORIES": {
+      "ALL": "All work",
+      "ENGINEERING": "Engineering",
+      "PROCEDURAL": "Procedural",
+      "RENDERING": "Rendering",
+      "ANALYSIS": "Analysis"
+    },
+    "CAPTION": {
+      "TECHNIQUES": "Techniques",
+      "SOURCE": "Source & method",
+      "ARCHIVE_SOURCE": "Archive source",
+      "ENLARGE": "Enlarge {{title}}"
+    },
+    "VIEWER": {
+      "CLOSE": "Close",
+      "CLOSE_LABEL": "Close image",
+      "PREVIOUS": "Previous",
+      "PREVIOUS_LABEL": "Previous image",
+      "NEXT": "Next",
+      "NEXT_LABEL": "Next image",
+      "ORIGINAL": "Open full-resolution source image"
+    },
+    "LAB": {
+      "EYEBROW": "The rendering lab",
+      "TITLE": "One model.<br/>Different answers.",
+      "DESCRIPTION": "These views use the same Cornell-box model and camera. Change how it is rendered to reveal shape, orientation or surface coordinates.",
+      "CONTROLS_LABEL": "Choose rendering style",
+      "SOURCE": "BRL-CAD renderer showcase",
+      "SOURCE_LINK": "Read the method and reproduce these views"
+    },
+    "COMMUNITY": {
+      "EYEBROW": "People behind the geometry",
+      "TITLE": "Keep exploring.",
+      "DESCRIPTION": "A few paths into the wider community, from creative coding to the next generation of tools.",
+      "STORIES": {
+        "CODING": {
+          "EYEBROW": "Creative coding / Jaipal Singh",
+          "TITLE": "Geometry as a program",
+          "DESCRIPTION": "A contributor's exploration of procedural modeling with Python and BRL-CAD.",
+          "LINK": "Read the story"
+        },
+        "INTERFACES": {
+          "EYEBROW": "New interfaces / Lorenzo Pegorari",
+          "TITLE": "Building what comes next",
+          "DESCRIPTION": "A 2025 contributor report on bringing a powerful geometry console to Arbalest.",
+          "LINK": "Explore the project"
+        },
+        "GENERATORS": {
+          "EYEBROW": "Make it yourself / BRL-CAD",
+          "TITLE": "Start with a rule",
+          "DESCRIPTION": "Discover the source generators behind the shells, lattices, gears and other procedural models.",
+          "LINK": "Open the full geometry guide"
+        }
+      },
+      "SUBMIT": {
+        "TITLE": "What are you making?",
+        "DESCRIPTION": "Share your BRL-CAD work with the community. Include the model or method, an image credit and permission to feature it.",
+        "ACTION": "Join the conversation"
+      }
+    },
+    "PROVENANCE": {
+      "TITLE": "Sources, not stock imagery.",
+      "DESCRIPTION": "Every image here is real BRL-CAD work, selected from project documentation or recovered from the official historical gallery. Captions link to the documented method or archive provenance. Historic images are not claims about current rendering speed.",
+      "ARCHIVE": "The recovered Earth and pen images are displayed with the website maintainer's permission. Their individual creators and original artwork licenses were not recorded; the documentation license does not apply to them.",
+      "CREDITS": "Image credits & curation notes",
+      "LICENSE": "Image license notes",
+      "FACEBOOK": "More from BRL-CAD on Facebook"
+    }
   }
 }
