@@ -20,7 +20,7 @@ export const InfoCard: React.FC<IProps> = ({
     <h3 id={id}>{title}</h3>
     {children}
     {link && (
-      <p>
+      <p className="info-card-link">
         <Link className="info-link" href={link}>
           {linkName} <span aria-hidden="true">&rarr;</span>
         </Link>
