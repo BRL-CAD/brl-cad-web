@@ -1,5 +1,8 @@
 'use client';
 
+// TODO: OGV is not deployed yet, so this page is disabled.
+// Move this file back to src/pages/ogv.tsx to restore the /ogv route.
+
 // TODO: restore together with the "Try It Now" button once OGV is deployed
 // import { LINKS } from '@constants';
 import Head from 'next/head';
