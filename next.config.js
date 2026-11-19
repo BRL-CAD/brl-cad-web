@@ -11,7 +11,10 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     unoptimized: true,
-    domains: ['bestpractices.coreinfrastructure.org', 'github.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'bestpractices.coreinfrastructure.org' },
+      { protocol: 'https', hostname: 'github.com' },
+    ],
   },
   trailingSlash: true,
 };

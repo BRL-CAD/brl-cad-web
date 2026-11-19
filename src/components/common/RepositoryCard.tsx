@@ -13,7 +13,7 @@ interface IProps {
 }
 
 export const RepositoryCard: React.FC<IProps> = ({
-  className, title, description, link, isImage,
+  className = '', title, description, link, isImage = false,
 }) => {
   const { t } = useTranslation();
 
@@ -27,9 +27,4 @@ export const RepositoryCard: React.FC<IProps> = ({
       {isImage && <GithubIcon />}
     </div>
   );
-};
-
-RepositoryCard.defaultProps = {
-  className: '',
-  isImage: false,
 };

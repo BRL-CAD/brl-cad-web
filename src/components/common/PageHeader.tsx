@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export const PageHeader: React.FC<IProps> = ({
-  className, title,
+  className = '', title,
 }) => {
   const particlesInit = async (main: Engine) => {
     await loadFull(main);
@@ -29,8 +29,4 @@ export const PageHeader: React.FC<IProps> = ({
       <h1>{title}</h1>
     </main>
   );
-};
-
-PageHeader.defaultProps = {
-  className: '',
 };

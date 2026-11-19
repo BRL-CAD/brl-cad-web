@@ -10,7 +10,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@next/next/recommended',
+    'plugin:@next/next/recommended-legacy',
     'airbnb',
   ],
   parser: '@typescript-eslint/parser',
@@ -70,13 +70,17 @@ module.exports = {
     'default-param-last': 'warn',
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
-    '@typescript-eslint/ban-types': 'warn',
+    '@typescript-eslint/no-empty-object-type': ['warn', { allowInterfaces: 'always' }],
+    '@typescript-eslint/no-unsafe-function-type': 'warn',
+    '@typescript-eslint/no-wrapper-object-types': 'warn',
     'jsx-a11y/label-has-associated-control': 'warn',
 
     // Others
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
+    // React 19 dropped defaultProps on function components, defaults live in the signature
+    'react/require-default-props': ['error', { functions: 'defaultArguments' }],
     '@typescript-eslint/no-empty-function': ['error', {
       allow: ['arrowFunctions'],
     }],

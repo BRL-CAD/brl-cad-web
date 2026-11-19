@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const AboutBlock: React.FC<IProps> = ({
-  className, title, fullTitle, image, description,
+  className = '', title, fullTitle, image, description,
 }) => {
   const [isModal, setIsModal] = useState(false);
 
@@ -49,8 +49,4 @@ export const AboutBlock: React.FC<IProps> = ({
       )}
     </div>
   );
-};
-
-AboutBlock.defaultProps = {
-  className: '',
 };
