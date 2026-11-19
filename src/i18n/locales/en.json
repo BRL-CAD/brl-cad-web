@@ -6,7 +6,8 @@
     "ABOUT": "About",
     "DOCS": "Docs",
     "SUPPORT": "Support",
-    "GALLERY": "Gallery"
+    "GALLERY": "Gallery",
+    "OGV": "OGV"
   },
   "MAIN": {
     "TITLE": "<1>BRL</1><1>-</1><1>CAD</1>",
@@ -94,6 +95,49 @@
       "LINKEDIN": "Follow us on LinkedIn",
       "TWITTER": "Follow us on Twitter",
       "YOUTUBE": "Subscribe BRL-CAD on Youtube"
+    }
+  },
+  "OGV": {
+    "TITLE": "OGV",
+    "HOW_TO_USE": "How to use OGV?",
+    "TRY_IT_NOW": "Try It Now"
+  },
+  "OGV_HIGHLIGHTS": {
+    "TITLE": "Highlights",
+    "HIGHLIGHT_1": {
+      "TITLE": "Instant 3D File Conversion",
+      "DESCRIPTION": "Upload your 3D models in formats like OBJ, and other formats and OGV convert them automatically using BRL-CAD’s powerful gcv library. Get your files ready for web viewing and download in multiple formats—all in one step."
+    },
+    "HIGHLIGHT_2": {
+      "TITLE": "Interactive 3D Viewer",
+      "DESCRIPTION": "View your models directly in the browser with full control—rotate, zoom, pan, switch backgrounds, and toggle grid settings and more. No extra software required, just drop your file and explore it instantly with OGV."
+    },
+    "HIGHLIGHT_3": {
+      "TITLE": "Instant 3D Preview",
+      "DESCRIPTION": "Upload any 3D file and get an instant, interactive preview right in your browser. No downloads, no delays—just smooth, real-time visualization."
+    }
+  },
+  "OGV_FAQ": {
+    "TITLE": "FAQ",
+    "QUESTION_1": {
+      "QUESTION": "What file formats does OGV support?",
+      "ANSWER": "There are multiple file formats that OGV supports. Input Formats: .obj, .ply, .vrml, .3mf, .asc, .x, .x3d, .3ds, .fbx, .assbin, .g. \n Output Formats: .obj, .stl, .ply, .vrml, .3mf, .asc, .x, .x3d, .3ds, .dae, .fbx, .json, .assbin, .g."
+    },
+    "QUESTION_2": {
+      "QUESTION": "Do I need to install anything?",
+      "ANSWER":  "No installation required — OGV works entirely in the browser. Just upload your file, and you’re ready to go."
+    },
+    "QUESTION_3": {
+      "QUESTION": "How long does it take to convert a file?",
+      "ANSWER": "The time it takes to convert a file depends on the size of the file. The larger the file, the longer it will take to convert."
+    },
+    "QUESTION_4": {
+      "QUESTION": "Can I download my converted files?",
+      "ANSWER": "Yes! After conversion, you can download your model in different formats, or even download multiple files together in a zip."
+    },
+    "QUESTION_5": {
+      "QUESTION": " Can I share my 3D models?",
+      "ANSWER": "Absolutely. Each model comes with a shareable link. You can choose whether it’s public or private, and others can view it in 3D instantly."
     }
   }
 }

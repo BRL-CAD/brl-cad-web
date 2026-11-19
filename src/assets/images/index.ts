@@ -4,5 +4,8 @@ export { default as about4 } from './about-4.webp';
 export { default as brlLogo } from './brl-logo.png';
 export { default as crossPlatfom } from './cross-platfom.webp';
 export { default as freeOpen } from './free-open.webp';
+export { default as instant3DFileConversion } from './instant-conversion.png';
+export { default as instant3DPreview } from './instant-preview.png';
+export { default as interactive3DViewer } from './interactive-viewer.png';
 export { default as since1979 } from './since-1979.webp';
 export { default as trustedMilitary } from './trusted-military.jpg';

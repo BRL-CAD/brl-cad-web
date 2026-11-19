@@ -7,6 +7,7 @@ export { HeartIcon } from './Heart';
 export { LinkedInIcon } from './LinkedIn';
 export { NavHamburgerIcon } from './NavHamburger';
 export { OpenSourceIcon } from './OpenSource';
+export { PlusIcon } from './Plus';
 export { SolidModelingIcon } from './SolidModeling';
 export { TwitterIcon } from './Twitter';
 export { YoutubeIcon } from './Youtube';
