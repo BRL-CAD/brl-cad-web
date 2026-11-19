@@ -15,7 +15,7 @@ interface IProps {
 }
 
 export const HighlightBlock: React.FC<IProps> = ({
-  className, image, title, description, link, linkName, isReverse,
+  className = '', image, title, description, link = '', linkName = '', isReverse = false,
 }) => (
   <div className={classNames('highlight', isReverse && 'highlight--reverse', className)}>
     <div className="highlight-image">
@@ -38,9 +38,3 @@ export const HighlightBlock: React.FC<IProps> = ({
     </div>
   </div>
 );
-HighlightBlock.defaultProps = {
-  className: '',
-  link: '',
-  linkName: '',
-  isReverse: false,
-};

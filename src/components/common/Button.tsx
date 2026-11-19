@@ -10,7 +10,7 @@ interface IProps extends React.HTMLAttributes<HTMLButtonElement & HTMLAnchorElem
 }
 
 export const Button: React.FC<IProps> = ({
-  children, className, elementType, href = '', ...props
+  children, className = '', elementType = 'button', href = '', target = '', ...props
 }) => {
   if (elementType === 'button') {
     return (
@@ -28,16 +28,10 @@ export const Button: React.FC<IProps> = ({
       type="button"
       className={classNames('brl-button', className)}
       href={href}
+      target={target}
       {...props}
     >
       {children}
     </Link>
   );
-};
-
-Button.defaultProps = {
-  className: '',
-  elementType: 'button',
-  href: '',
-  target: '',
 };
