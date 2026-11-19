@@ -71,6 +71,13 @@ and open `http://localhost:5000`.
 
 The site is deployed as static files served by nginx in a FreeBSD jail managed with Bastille. See [bastille/README.md](bastille/README.md).
 
+To serve the export from a subdirectory, set `BASE_PATH` when building, e.g. `BASE_PATH=/~user npm run build`.
+
+## Gallery
+The gallery page reads its pieces and render modes from `src/gallery.json`. Previews live in `src/assets/gallery/` (registered in its `index.ts`), and the recovered full-resolution originals and provenance notes live in `public/gallery/`.
+
+To add a piece, add its entry to `src/gallery.json`, add a WebP preview named after its `id`, and register it in `src/assets/gallery/index.ts`. Keep the credit and source details: the captions link to them. Previews are generated from the BRL-CAD documentation sources with `tools/build-gallery.mjs` in [BRL-CAD/web](https://github.com/BRL-CAD/web), which also verifies the archived originals.
+
 <!-- ## Contribution
 Please see [CONTRIBUTION.md](CONTRIBUTING.md) -->
 

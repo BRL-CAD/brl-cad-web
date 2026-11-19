@@ -35,6 +35,17 @@ $black: #000000;
   --surface-bg: var(--white);
   --band-bg: #333333;
   --text-color: #{$black};
+
+  --gallery-band: var(--surface-bg);
+  --gallery-viewer-bg: var(--surface-bg);
+  --gallery-heading: var(--text-color);
+  --gallery-text: #4A4F59;
+  --gallery-muted: #5F6570;
+  --gallery-border: #DADDE2;
+  --gallery-accent: var(--primary-color);
+  --gallery-chip-hover: var(--black-10);
+  --gallery-chip-active-bg: var(--text-color);
+  --gallery-chip-active-text: var(--white);
 }
 
 :root[data-theme="dark"] {
@@ -54,4 +65,15 @@ $black: #000000;
   --surface-bg: #1E1E1E;
   --band-bg: #242424;
   --text-color: #F2F2F2;
+
+  --gallery-band: #161A21;
+  --gallery-viewer-bg: #11151C;
+  --gallery-heading: #FFFFFF;
+  --gallery-text: #B2B8C4;
+  --gallery-muted: #939BA9;
+  --gallery-border: #2B303A;
+  --gallery-accent: #FF7398;
+  --gallery-chip-hover: #20252E;
+  --gallery-chip-active-bg: #FFFFFF;
+  --gallery-chip-active-text: #11141A;
 }

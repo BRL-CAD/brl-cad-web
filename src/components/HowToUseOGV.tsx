@@ -1,5 +1,6 @@
 'use client';
 
+import { withBasePath } from '@constants';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef } from 'react';
 
@@ -21,7 +22,7 @@ export const HowToUseOGV: React.FC<IProps> = () => {
       style={{ scale }}
     >
       <video
-        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/how-to-use.mp4`}
+        src={withBasePath('/how-to-use.mp4')}
         className="how-to-use-video"
         loop
         muted

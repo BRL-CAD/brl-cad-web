@@ -1,0 +1,30 @@
+{
+  "permission": "The BRL-CAD website maintainer explicitly authorized displaying these recovered official-gallery images on this website. No general reuse license is asserted.",
+  "recovered": "2026-10-18",
+  "items": [
+    {
+      "id": "earth",
+      "title": "Earth cutaway",
+      "file": "originals/earth.png",
+      "historicalPaths": ["/gallery/galleries/renderings/earth.png", "/g/galleries/renderings/earth.png"],
+      "sha256": "7b479332732bb93c9b7022cddda8978775d1fe2f2b485e897d8fe38af890f5f0",
+      "bytes": 2544793,
+      "width": 2048,
+      "height": 2048,
+      "creator": "Individual creator not recorded in the recovered file",
+      "license": "Original artwork license not recorded; not covered by the documentation license or Piwigo software license"
+    },
+    {
+      "id": "pen",
+      "title": "Transparent mechanical pen",
+      "file": "originals/pen.png",
+      "historicalPaths": ["/gallery/galleries/renderings/pen.png", "/g/galleries/renderings/pen.png"],
+      "sha256": "a33b593cdf483eed089098823b840c273bcb7bd4dbceac1685139c38f746396f",
+      "bytes": 673806,
+      "width": 2048,
+      "height": 2048,
+      "creator": "Individual creator not recorded in the recovered file",
+      "license": "Original artwork license not recorded; not covered by the documentation license or Piwigo software license"
+    }
+  ]
+}

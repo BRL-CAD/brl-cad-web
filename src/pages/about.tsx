@@ -56,7 +56,7 @@ const About: NextPage = () => {
           <h2>{t('ABOUT_PAGE.EXAMPLES.TITLE')}</h2>
           <p>{t('ABOUT_PAGE.EXAMPLES.DESCRIPTION')}</p>
           <div className="info-actions">
-            <Button elementType="a" href={LINKS.GALLERY} className="brl-button--small brl-button--reverse">
+            <Button elementType="a" href="/gallery/" className="brl-button--small brl-button--reverse">
               {t('ABOUT_PAGE.EXAMPLES.GALLERY')}
             </Button>
             <Button elementType="a" href={`${LINKS.DOCS_HTML}lessons/mged01_creating_primitive_shapes.html`} className="brl-button--small">

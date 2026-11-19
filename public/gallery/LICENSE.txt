@@ -1,0 +1,50 @@
+BRL-CAD gallery image licenses
+
+This documentation license applies only to the documentation-sourced images
+identified in collection.json and SOURCES.md. It does not apply to recovered
+official-gallery artwork (Earth and pen). Their original creators/licenses
+were not recorded in the recovered files; they are displayed at the BRL-CAD
+website maintainer's explicit direction without asserting a general reuse
+license. See archive.json and SOURCES.md for their provenance. Piwigo's GPL
+software license is not an artwork license.
+
+Documentation-sourced images
+
+Copyright (c) 1984-2026 United States Government as represented by
+the U.S. Army Research Laboratory.
+
+Source: BRL-CAD documentation at commit
+bc130e1e7a9f179fe95fb42cde1a7d3becb512df.
+See collection.json and SOURCES.md for individual image provenance and credits.
+
+BSD Documentation License
+
+Redistribution and use in source (AsciiDoc format) and 'compiled' forms
+(PDF, PostScript, HTML, RTF, etc.), with or without modification, are
+permitted provided that the following conditions are met:
+
+1. Redistributions of source code (AsciiDoc format) must retain the
+above copyright notice, this list of conditions and the following
+disclaimer.
+
+2. Redistributions in compiled form (transformed to other DTDs,
+converted to PDF, PostScript, HTML, RTF, and other formats) must
+reproduce the above copyright notice, this list of conditions and the
+following disclaimer in the documentation and/or other materials
+provided with the distribution.
+
+3. The name of the author may not be used to endorse or promote
+products derived from this documentation without specific prior
+written permission.
+
+THIS DOCUMENTATION IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.

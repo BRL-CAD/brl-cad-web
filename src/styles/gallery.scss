@@ -1,0 +1,743 @@
+.gallery {
+  color: var(--gallery-text);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow: clip;
+
+  [hidden] {
+    display: none !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--gallery-heading);
+    letter-spacing: -0.035em;
+  }
+
+  a:hover {
+    color: var(--gallery-accent);
+  }
+
+  a,
+  button {
+    &:focus-visible {
+      outline: 3px solid var(--gallery-accent);
+      outline-offset: 5px;
+    }
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body.has-gallery-viewer {
+  overflow: hidden;
+}
+
+.gallery-wrap {
+  width: min(100% - #{$rhythm * 5}, 1360px);
+  margin-inline: auto;
+
+  @include tablet {
+    width: min(100% - #{$rhythm * 3}, 600px);
+  }
+}
+
+.gallery-eyebrow {
+  @include font($fontSize: 11px, $lineHeight: 1.5, $fontWeight: 600, $textTransform: uppercase);
+  letter-spacing: 0.17em;
+}
+
+.gallery-action {
+  display: inline-flex;
+  align-items: center;
+  gap: $rhythm * 2;
+  padding: $rhythm 0;
+  border-bottom: 1px solid var(--gallery-accent);
+  font-weight: 500;
+}
+
+.gallery-section-heading {
+  @include flex($justifyContent: space-between, $alignItems: end);
+  gap: $rhythm * 3;
+  margin-bottom: $rhythm * 3;
+
+  .gallery-eyebrow {
+    color: var(--gallery-muted);
+    margin-bottom: $rhythm;
+  }
+
+  h2 {
+    @include font($fontSize: clamp(35px, 4vw, 58px), $lineHeight: 1.05, $fontWeight: 500);
+  }
+
+  > p {
+    @include font($fontSize: 15px);
+    max-width: 360px;
+  }
+
+  @include tablet {
+    display: block;
+
+    > p {
+      margin-top: $rhythm * 1.5;
+    }
+  }
+}
+
+// Hero
+
+.gallery-hero {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(32px, 5vw, 90px);
+  align-items: start;
+  padding-block: $rhythm * 6 $rhythm * 7;
+
+  @include tablet-large {
+    grid-template-columns: 1fr 1.15fr;
+    gap: $rhythm * 3;
+  }
+
+  @include tablet {
+    display: block;
+    padding-block: $rhythm * 3 $rhythm * 4;
+  }
+}
+
+.gallery-intro {
+  padding-top: $rhythm * 2;
+
+  @include tablet {
+    padding-top: 0;
+    margin-bottom: $rhythm * 3;
+  }
+
+  .gallery-eyebrow {
+    color: var(--gallery-accent);
+    margin-bottom: $rhythm * 2;
+  }
+
+  h1 {
+    @include font($fontSize: clamp(55px, 6.4vw, 100px), $lineHeight: 0.99, $fontWeight: 500);
+    margin-bottom: $rhythm * 2;
+
+    @include tablet-large {
+      @include font($fontSize: 65px);
+    }
+
+    @include tablet {
+      @include font($fontSize: clamp(56px, 13vw, 86px));
+    }
+  }
+
+  .gallery-action {
+    margin-block: $rhythm * 2 $rhythm * 3;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.gallery-deck {
+  @include font($fontSize: 21px, $fontWeight: 500, $color: var(--gallery-heading));
+  margin-bottom: $rhythm;
+
+  @include tablet-large {
+    @include font($fontSize: 18px);
+  }
+}
+
+.gallery-intro-text {
+  max-width: 370px;
+}
+
+.gallery-intro-note {
+  @include font($fontSize: 12px, $color: var(--gallery-muted));
+  max-width: 300px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.gallery-feature {
+  min-width: 0;
+
+  .gallery-image-link {
+    aspect-ratio: 1.14;
+    border-radius: 2px;
+
+    @include tablet {
+      aspect-ratio: 1.16;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center 52%;
+    }
+  }
+
+  figcaption {
+    padding-top: $rhythm * 1.5;
+  }
+
+  h2 {
+    @include font($fontSize: 26px, $lineHeight: 1.2, $fontWeight: 500);
+    margin-top: 4px;
+  }
+
+  .gallery-description,
+  .gallery-tags {
+    display: none;
+  }
+}
+
+// Images and captions shared by the hero, the cards and the viewer
+
+.gallery-image-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: $black;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 350ms ease;
+  }
+
+  &:hover img {
+    transform: scale(1.025);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    img {
+      transition: none;
+    }
+
+    &:hover img {
+      transform: none;
+    }
+  }
+}
+
+.gallery-enlarge {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(#FFFFFF, 0.42);
+  border-radius: 50%;
+  background: rgba(12, 14, 18, 0.85);
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.gallery-kicker {
+  @include font($fontSize: 11px, $color: var(--gallery-muted), $textTransform: uppercase);
+  letter-spacing: 0.09em;
+}
+
+.gallery-description {
+  @include font($fontSize: 13px, $lineHeight: 1.75);
+}
+
+.gallery-tags {
+  @include flex($wrap: wrap);
+  gap: 7px $rhythm;
+  margin-top: $rhythm * 1.5;
+
+  li {
+    @include font($fontSize: 10px, $color: var(--gallery-muted));
+    letter-spacing: 0.04em;
+  }
+
+  li + li::before {
+    content: "·";
+    margin-right: $rhythm;
+    color: var(--gallery-accent);
+  }
+}
+
+.gallery-credit {
+  @include font($fontSize: 11px, $lineHeight: 1.7, $color: var(--gallery-muted));
+  margin-top: $rhythm * 1.5;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// Collection
+
+.gallery-collection {
+  padding-block: $rhythm * 2 $rhythm * 7;
+  scroll-margin-top: $rhythm * 2;
+}
+
+.gallery-filter-bar {
+  @include flex($justifyContent: space-between, $alignItems: center);
+  gap: $rhythm * 1.5;
+  margin-bottom: $rhythm * 2.5;
+  padding-block: $rhythm * 1.5;
+  border-block: 1px solid var(--gallery-border);
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.gallery-filters,
+.gallery-mode-controls {
+  @include flex($wrap: wrap);
+  gap: 8px;
+
+  button {
+    @include font($fontSize: 13px, $color: var(--gallery-muted));
+    padding: 9px 15px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    background: transparent;
+
+    &:hover {
+      color: var(--gallery-heading);
+      background: var(--gallery-chip-hover);
+    }
+
+    &[aria-pressed="true"] {
+      color: var(--gallery-chip-active-text);
+      background: var(--gallery-chip-active-bg);
+    }
+  }
+}
+
+.gallery-filters {
+  @include tablet {
+    gap: 4px;
+
+    button {
+      padding-inline: $rhythm;
+    }
+  }
+}
+
+.gallery-count {
+  @include font($fontSize: 12px, $color: var(--gallery-muted));
+  white-space: nowrap;
+
+  @include tablet {
+    margin-top: $rhythm * 1.5;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $rhythm * 3.5 $rhythm * 2;
+  align-items: start;
+
+  @include tablet-large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include tablet {
+    gap: $rhythm * 3 $rhythm * 1.5;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-card {
+  min-width: 0;
+
+  .gallery-image-link {
+    aspect-ratio: 1;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  figcaption {
+    padding-top: $rhythm * 1.5;
+  }
+
+  h3 {
+    @include font($fontSize: 23px, $lineHeight: 1.2, $fontWeight: 500);
+    margin-block: 8px $rhythm;
+
+    @include tablet {
+      @include font($fontSize: 21px);
+    }
+  }
+
+  // Spans two columns only while the full collection is shown
+  &--wide {
+    grid-column: span 2;
+
+    .gallery-image-link {
+      aspect-ratio: 2.05;
+    }
+
+    @include tablet-large {
+      grid-column: auto;
+
+      .gallery-image-link {
+        aspect-ratio: 1;
+      }
+    }
+  }
+}
+
+// Rendering lab
+
+.gallery-lab {
+  background: var(--gallery-band);
+  border-block: 1px solid var(--gallery-border);
+  padding-block: $rhythm * 6;
+
+  @include tablet {
+    padding-block: $rhythm * 4;
+  }
+}
+
+.gallery-mode-controls {
+  margin-bottom: $rhythm * 2.5;
+}
+
+.gallery-mode {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 0.9fr);
+  gap: clamp(32px, 7vw, 110px);
+  align-items: center;
+
+  @include tablet {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 512px;
+    height: auto;
+    margin-inline: auto;
+    background: $black;
+  }
+
+  h3 {
+    @include font($fontSize: 35px, $lineHeight: 1.15, $fontWeight: 500);
+    margin-bottom: 8px;
+
+    @include tablet {
+      @include font($fontSize: 29px);
+      margin-top: $rhythm * 2;
+    }
+  }
+
+  p {
+    @include font($fontSize: 17px);
+    max-width: 340px;
+  }
+
+  code {
+    @include font($fontSize: 13px, $lineHeight: 1.5, $fontFamily: (ui-monospace, monospace), $color: var(--gallery-accent));
+    display: inline-block;
+    margin-top: $rhythm * 1.5;
+  }
+}
+
+.gallery-lab-source {
+  @include font($fontSize: 12px, $color: var(--gallery-muted));
+  border-top: 1px solid var(--gallery-border);
+  padding-top: $rhythm * 2;
+  margin-top: $rhythm * 2.5;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+// Community
+
+.gallery-community {
+  padding-block: $rhythm * 7 $rhythm * 5;
+
+  @include tablet {
+    padding-block: $rhythm * 4 $rhythm * 3;
+  }
+}
+
+.gallery-stories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $rhythm * 2.5;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  > a {
+    @include flex($direction: column);
+    min-width: 0;
+    padding: $rhythm * 2.5 0;
+    border-block: 1px solid var(--gallery-border);
+
+    @include tablet {
+      & + a {
+        border-top: 0;
+      }
+    }
+  }
+
+  .gallery-eyebrow {
+    @include font($fontSize: 10px, $color: var(--gallery-muted));
+  }
+
+  h3 {
+    @include font($fontSize: 25px, $lineHeight: 1.2, $fontWeight: 500);
+    margin-block: $rhythm * 1.5 $rhythm;
+  }
+
+  p {
+    @include font($fontSize: 14px);
+    margin-bottom: $rhythm * 2.5;
+
+    @include tablet {
+      margin-bottom: $rhythm * 1.5;
+    }
+  }
+}
+
+.gallery-story-link {
+  @include font($fontSize: 13px, $color: var(--gallery-accent));
+  margin-top: auto;
+}
+
+.gallery-submit {
+  @include flex($justifyContent: space-between, $alignItems: center);
+  gap: $rhythm * 4;
+  padding: $rhythm * 3;
+  margin-top: $rhythm * 4;
+  border-left: 3px solid var(--primary-color);
+  background: var(--gallery-band);
+
+  @include tablet-large {
+    gap: $rhythm * 2;
+    padding: $rhythm * 2.5;
+  }
+
+  @include tablet {
+    display: block;
+    padding: $rhythm * 2;
+  }
+
+  h3 {
+    @include font($fontSize: 27px, $lineHeight: 1.2, $fontWeight: 500);
+  }
+
+  p {
+    @include font($fontSize: 14px);
+    max-width: 640px;
+    margin-top: 8px;
+  }
+
+  .gallery-action {
+    @include font($fontSize: 13px);
+    flex-shrink: 0;
+
+    @include tablet {
+      margin-top: $rhythm * 1.5;
+    }
+  }
+}
+
+// Provenance
+
+.gallery-provenance {
+  @include font($fontSize: 12px, $color: var(--gallery-muted));
+  padding-block: $rhythm * 2.5 $rhythm * 5;
+  border-top: 1px solid var(--gallery-border);
+
+  h2 {
+    @include font($fontSize: 15px, $fontWeight: 500);
+    margin-bottom: $rhythm;
+  }
+
+  p {
+    max-width: 840px;
+    margin-bottom: $rhythm;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+// Viewer
+
+.gallery-viewer {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: $rhythm * 1.5;
+  width: min(1240px, calc(100% - 48px));
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: $rhythm $rhythm * 2.5 $rhythm * 2;
+  border: 1px solid var(--gallery-border);
+  border-radius: 3px;
+  background: var(--gallery-viewer-bg);
+  color: var(--gallery-text);
+  overflow: hidden;
+
+  &:not([open]) {
+    display: none;
+  }
+
+  &::backdrop {
+    background: rgba($black, 0.87);
+  }
+
+  @include tablet {
+    width: calc(100% - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: $rhythm $rhythm * 1.5 $rhythm * 1.5;
+    gap: $rhythm;
+  }
+}
+
+.gallery-close {
+  @include font($fontSize: 13px, $color: var(--gallery-heading));
+  justify-self: end;
+  min-height: 44px;
+  padding: 6px $rhythm;
+  border: 0;
+  background: transparent;
+
+  span {
+    margin-left: $rhythm;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}
+
+.gallery-viewer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
+  gap: $rhythm * 2.5;
+  align-items: center;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+
+  @include tablet {
+    display: block;
+  }
+
+  // Short landscape screens: keep the image in view while the caption scrolls
+  @media (min-width: #{$tablet + 1}) and (max-height: 600px) {
+    align-items: start;
+  }
+}
+
+.gallery-viewer-image {
+  display: block;
+  width: 100%;
+  height: min(66dvh, 800px);
+  object-fit: contain;
+  background: $black;
+
+  @include tablet {
+    height: auto;
+    max-height: 55dvh;
+  }
+
+  @media (min-width: #{$tablet + 1}) and (max-height: 600px) {
+    position: sticky;
+    top: 0;
+    height: max(1px, calc(100dvh - 240px));
+  }
+}
+
+.gallery-viewer-caption {
+  @include tablet {
+    margin-top: $rhythm * 2;
+  }
+
+  h2 {
+    @include font($fontSize: clamp(24px, 3vw, 36px), $lineHeight: 1.15, $fontWeight: 500);
+    margin-block: $rhythm $rhythm * 1.5;
+  }
+
+  .gallery-description {
+    @include font($fontSize: 15px);
+  }
+
+  a {
+    color: var(--gallery-accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.gallery-original {
+  @include font($fontSize: 13px);
+  display: inline-block;
+  margin-top: $rhythm * 2;
+}
+
+.gallery-viewer-nav {
+  @include flex($justifyContent: space-between, $alignItems: center);
+  gap: $rhythm * 1.5;
+  border-top: 1px solid var(--gallery-border);
+  padding-top: $rhythm * 1.5;
+
+  button {
+    @include font($fontSize: 13px, $color: var(--gallery-heading));
+    min-height: 44px;
+    padding: 8px $rhythm;
+    border: 1px solid var(--gallery-border);
+    border-radius: 3px;
+    background: var(--gallery-band);
+  }
+}
+
+.gallery-viewer-counter {
+  @include font($fontSize: 12px, $lineHeight: 1.4, $color: var(--gallery-muted));
+  text-align: center;
+}
+
+.gallery-viewer-announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

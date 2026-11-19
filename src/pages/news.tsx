@@ -42,7 +42,7 @@ const News: NextPage = () => {
               i18nKey="NEWS_PAGE.UPDATE.DESCRIPTION"
               components={{
                 docs: <Link className="info-link" href={LINKS.DOCS} />,
-                gallery: <Link className="info-link" href={LINKS.GALLERY} />,
+                gallery: <Link className="info-link" href="/gallery/" />,
                 support: <Link className="info-link" href="/support/" />,
               }}
             />
