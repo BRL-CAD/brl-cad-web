@@ -16,8 +16,9 @@ const themeScript = `(function () {
 
 export default function Document() {
   const { t } = useTranslation();
+  // data-scroll-behavior lets Next.js turn smooth scrolling off while changing pages
   return (
-    <Html lang="en">
+    <Html lang="en" data-scroll-behavior="smooth">
       <Head>
         <meta name="description" content={t('INFORMATION.DESCRIPTION')} />
         <link rel="icon" href={withBasePath('/favicon.ico')} />
