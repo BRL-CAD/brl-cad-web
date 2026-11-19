@@ -12,11 +12,11 @@ export interface ConstantData {
 }
 
 export const NAVIGATION_DATA: ConstantData[] = [
-  { title: <Translation>{(t) => t('NAVIGATION.DOWNLOAD')}</Translation>, value: 'https://github.com/BRL-CAD/brlcad' },
-  { title: <Translation>{(t) => t('NAVIGATION.NEWS')}</Translation>, value: 'https://www.facebook.com/BRL-CAD-387112738872/' },
-  { title: <Translation>{(t) => t('NAVIGATION.ABOUT')}</Translation>, value: 'https://en.wikipedia.org/wiki/BRL-CAD' },
-  { title: <Translation>{(t) => t('NAVIGATION.DOCS')}</Translation>, value: 'https://brlcad.org/wiki/' },
-  { title: <Translation>{(t) => t('NAVIGATION.SUPPORT')}</Translation>, value: 'https://github.com/BRL-CAD/brlcad/issues' },
+  { title: <Translation>{(t) => t('NAVIGATION.DOWNLOAD')}</Translation>, value: 'https://brlcad.org/download/' },
+  { title: <Translation>{(t) => t('NAVIGATION.NEWS')}</Translation>, value: '/news/' },
+  { title: <Translation>{(t) => t('NAVIGATION.ABOUT')}</Translation>, value: '/about/' },
+  { title: <Translation>{(t) => t('NAVIGATION.DOCS')}</Translation>, value: 'https://brlcad.org/docs/' },
+  { title: <Translation>{(t) => t('NAVIGATION.SUPPORT')}</Translation>, value: '/support/' },
   { title: <Translation>{(t) => t('NAVIGATION.GALLERY')}</Translation>, value: 'https://brlcad.org/gallery/' },
   // TODO: OGV is not deployed yet, restore this link once it is
   // { title: <Translation>{(t) => t('NAVIGATION.OGV')}</Translation>, value: '/ogv' },
@@ -53,7 +53,28 @@ export const LINKS = {
   LEARN_MORE_PDF: 'https://brlcad.org/HACKING_BRL-CAD.pdf',
   WIKIPEDIA: 'https://en.wikipedia.org/wiki/BRL-CAD',
   OGV_LINK: 'https://ogv-five.vercel.app/',
+  // Served by brlcad.org itself, outside this site
+  DOCS: 'https://brlcad.org/docs/',
+  DOCS_HTML: 'https://brlcad.org/docs/html/',
+  GALLERY: 'https://brlcad.org/gallery/',
+  SOURCE: 'https://brlcad.org/source/',
+  DOWNLOAD: 'https://brlcad.org/download/',
+  RELEASE_TAGS: 'https://git.brlcad.org/BRL-CAD/brlcad/tags',
+  DEVELOPMENT: 'https://git.brlcad.org/BRL-CAD/brlcad/commits/branch/main',
+  ZULIP_LOGIN: 'https://brlcad.zulipchat.com/login/',
+  ZULIP_BRLCAD: 'https://brlcad.zulipchat.com/#narrow/channel/104062-brlcad',
+  ZULIP_ANNOUNCE: 'https://brlcad.zulipchat.com/#narrow/channel/104061-announce',
+  ZULIP_GSOC: 'https://brlcad.zulipchat.com/#narrow/channel/111975-Google-Summer-of-Code',
+  ZULIP_INVITE: 'mailto:devs@brlcad.org?subject=BRL-CAD%20Zulip%20invitation',
+  MAILING_LIST: 'https://sourceforge.net/p/brlcad/mailman/brlcad-users/',
 };
+
+export const releaseNotesLink = (version: string) => `https://git.brlcad.org/BRL-CAD/brlcad/raw/tag/rel-${version.replace(/\./g, '-')}/NEWS`;
+
+// Dates are stored as YYYY-MM-DD; format in UTC so the server and browser agree
+export const formatDate = (date: string) => new Date(date).toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+});
 
 export const ABOUT_US = (t: TFunction) => [
   {
