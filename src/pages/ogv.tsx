@@ -1,6 +1,7 @@
 'use client';
 
-import { LINKS } from '@constants';
+// TODO: restore together with the "Try It Now" button once OGV is deployed
+// import { LINKS } from '@constants';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 
@@ -9,7 +10,8 @@ import {
 } from '../assets/images';
 import { HowToUseOGV } from '../components';
 import {
-  Button, FAQ, HighlightBlock, PageHeader,
+  // Button,
+  FAQ, HighlightBlock, PageHeader,
 } from '../components/common';
 
 const OGV = () => {
@@ -60,9 +62,18 @@ const OGV = () => {
         <title>{t('TITLE')}</title>
       </Head>
       <PageHeader title={t('OGV.TITLE')} />
+      {/* TODO: OGV is not deployed yet, restore this link once it is
       <div className="ogv-try-it-now-button-container">
-        <Button elementType="a" href={LINKS.OGV_LINK} target="_blank" className="ogv-try-it-now-button">{t('OGV.TRY_IT_NOW')}</Button>
+        <Button
+          elementType="a"
+          href={LINKS.OGV_LINK}
+          target="_blank"
+          className="ogv-try-it-now-button"
+        >
+          {t('OGV.TRY_IT_NOW')}
+        </Button>
       </div>
+      */}
       <h1 className="ogv-heading">{t('OGV_HIGHLIGHTS.TITLE')}</h1>
       {highlights.map(({
         description, title, image,
