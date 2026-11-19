@@ -18,7 +18,8 @@ export const NAVIGATION_DATA: ConstantData[] = [
   { title: <Translation>{(t) => t('NAVIGATION.DOCS')}</Translation>, value: 'https://brlcad.org/wiki/' },
   { title: <Translation>{(t) => t('NAVIGATION.SUPPORT')}</Translation>, value: 'https://github.com/BRL-CAD/brlcad/issues' },
   { title: <Translation>{(t) => t('NAVIGATION.GALLERY')}</Translation>, value: 'https://brlcad.org/gallery/' },
-  { title: <Translation>{(t) => t('NAVIGATION.OGV')}</Translation>, value: '/ogv' },
+  // TODO: OGV is not deployed yet, restore this link once it is
+  // { title: <Translation>{(t) => t('NAVIGATION.OGV')}</Translation>, value: '/ogv' },
 ];
 
 export const SOCIAL_DATA = (t: TFunction): (ConstantData & { label: string })[] => [
