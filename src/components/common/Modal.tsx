@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const Modal: React.FC<IProps> = ({
-  className, title, children, onClose,
+  className = '', title, children, onClose,
 }) => {
   useModalScroll(true);
 
@@ -29,8 +29,4 @@ export const Modal: React.FC<IProps> = ({
       </div>
     </ClientOnlyPortal>
   );
-};
-
-Modal.defaultProps = {
-  className: '',
 };

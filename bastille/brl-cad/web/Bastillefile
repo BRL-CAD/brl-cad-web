@@ -1,0 +1,29 @@
+# Bastille template for the BRL-CAD website.
+#
+# The site is a static Next.js export (the `out/` directory), so the jail only
+# runs nginx. The export is built outside the jail and synced to SITE_DIR on
+# the FreeBSD host, which is mounted read-only into the jail.
+#
+# Apply once per jail:
+#   bastille template brlcadweb brl-cad/web
+# Override the defaults with --arg, for example:
+#   bastille template brlcadweb brl-cad/web --arg HOST_PORT=8080
+
+# Directory on the host that holds the exported site.
+ARG SITE_DIR=/usr/local/www/brl-cad-web
+# Port on the host that is redirected to nginx in the jail.
+ARG HOST_PORT=80
+
+PKG nginx
+
+# Copies usr/local/etc/nginx/nginx.conf from this template into the jail.
+CP usr /
+
+MOUNT ${SITE_DIR} usr/local/www/brl-cad-web nullfs ro 0 0
+
+SYSRC nginx_enable=YES
+SERVICE nginx restart
+
+# Keep this last: Bastille aborts the template if the redirect already exists,
+# so a re-apply still refreshes everything above.
+RDR tcp ${HOST_PORT} 80

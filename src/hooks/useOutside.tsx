@@ -10,7 +10,7 @@ type OutsideReturn = [
 
 export const useOutside = (initial = false, callback = () => { }): OutsideReturn => {
   const [value, setValue] = useState(initial);
-  const ref = useRef<HTMLElement>();
+  const ref = useRef<HTMLElement>(undefined);
 
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent | any) => {

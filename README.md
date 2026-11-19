@@ -21,7 +21,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
 * Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
-* Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
+* Node.js 26 (LTS) or newer - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. With [nvm](https://github.com/nvm-sh/nvm), run `nvm install` in the project folder to get the version from `.nvmrc`. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
 
 ## Installation
 
@@ -63,11 +63,13 @@ To build BRL-CAD Web run build script
 ```
 npm run build
 ```
-This will generate the build files then run
+This generates a static export in the `out` folder. To preview it locally run
 ```
 npm start
 ```
-This will run the production server
+and open `http://localhost:5000`.
+
+The site is deployed as static files served by nginx in a FreeBSD jail managed with Bastille. See [bastille/README.md](bastille/README.md).
 
 <!-- ## Contribution
 Please see [CONTRIBUTION.md](CONTRIBUTING.md) -->

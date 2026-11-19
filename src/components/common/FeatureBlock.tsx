@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const FeatureBlock: React.FC<IProps> = ({
-  className, Icon, title, description, link, linkName,
+  className = '', Icon, title, description, link = '', linkName = '',
 }) => (
   <div className={classNames('feature', className)}>
     <div className="feature-icon">
@@ -34,9 +34,3 @@ export const FeatureBlock: React.FC<IProps> = ({
     )}
   </div>
 );
-
-FeatureBlock.defaultProps = {
-  className: '',
-  link: '',
-  linkName: '',
-};

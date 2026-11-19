@@ -6,8 +6,8 @@ interface IProps {
   selector?: string;
 }
 
-export const ClientOnlyPortal: React.FC<IProps> = ({ children, selector = 'body' }) => {
-  const ref = useRef<Element | null>();
+export const ClientOnlyPortal: React.FC<IProps> = ({ children, selector = '#__next' }) => {
+  const ref = useRef<Element | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -16,8 +16,4 @@ export const ClientOnlyPortal: React.FC<IProps> = ({ children, selector = 'body'
   }, []);
 
   return (mounted && ref.current) ? createPortal(children, ref.current) : null;
-};
-
-ClientOnlyPortal.defaultProps = {
-  selector: '#__next',
 };
