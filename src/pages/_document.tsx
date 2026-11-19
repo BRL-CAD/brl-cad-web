@@ -1,7 +1,18 @@
+import { THEME_STORAGE_KEY } from '@constants';
 import {
   Head, Html, Main, NextScript,
 } from 'next/document';
+import Script from 'next/script';
 import { useTranslation } from 'react-i18next';
+
+// Runs before the first paint, so the page never flashes in the wrong theme.
+// A saved choice wins, otherwise the theme follows the system setting.
+const themeScript = `(function () {
+  var stored = null;
+  try { stored = localStorage.getItem('${THEME_STORAGE_KEY}'); } catch (e) {}
+  var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+})();`;
 
 export default function Document() {
   const { t } = useTranslation();
@@ -19,6 +30,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <Script id="theme-init" strategy="beforeInteractive">{themeScript}</Script>
       </body>
     </Html>
   );

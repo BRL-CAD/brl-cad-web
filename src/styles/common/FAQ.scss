@@ -24,6 +24,8 @@
     border-bottom: 1px solid var(--border-primary);
     cursor: pointer;
     background-color: transparent;
+    color: inherit;
+    fill: currentColor;
   }
   &-answer {
     font-size: 1rem;
