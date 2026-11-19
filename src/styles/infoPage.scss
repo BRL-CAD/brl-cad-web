@@ -62,7 +62,7 @@
 .info-page .info-eyebrow {
   @include font($fontSize: 14px, $fontWeight: 700, $color: var(--primary-color), $textTransform: uppercase);
   letter-spacing: 0.08em;
-  margin-bottom: $rhythm / 2;
+  margin-bottom: $rhythm * 0.5;
 }
 
 .info-page .info-lead {
@@ -130,13 +130,13 @@
   // Line the links up along the bottom of cards that share a row
   &-link {
     margin-top: auto;
-    padding-top: $rhythm / 2;
+    padding-top: $rhythm * 0.5;
   }
 
   &-step {
     @include font($fontSize: 13px, $fontWeight: 700, $color: var(--secondary-color), $textTransform: uppercase);
     letter-spacing: 0.08em;
-    margin-bottom: $rhythm / 2;
+    margin-bottom: $rhythm * 0.5;
   }
 }
 
@@ -145,7 +145,7 @@
 }
 
 .info-card .info-note {
-  margin-bottom: $rhythm / 2;
+  margin-bottom: $rhythm * 0.5;
 }
 
 .info-link {
